@@ -1,0 +1,17 @@
+[
+  {
+    "id": 2,
+    "name": "Microsoft",
+    "location": "Chicago"
+  },
+  {
+    "id": 3,
+    "name": "Nvidia",
+    "location": "New york"
+  },
+  {
+    "id": 3,
+    "name": "Amazon",
+    "location": "Washington"
+  }
+]
