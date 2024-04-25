@@ -3,59 +3,37 @@ const fs = require("fs");
 
 const router = express.Router();
 router.get("/:id", function(req, res) {
-    console.log('Deleted');
-    const data2 = fs.readFileSync('/workspaces/CRUD/node-CRUD-app/routes/data.json', 'utf8');
-    const data = JSON.parse(data2);
-    let indexToDelete = data.findIndex(user => user.id === parseInt(req.params.id));
-    if (indexToDelete !== -1) {
-        data.splice(indexToDelete, 1);
-        const updatedJsonData = JSON.stringify(data, null, 2); // Use null or omit the third argument
-        fs.writeFile('/workspaces/CRUD/node-CRUD-app/routes/data.json', updatedJsonData, (err) => {
-        if (err) {
-            console.error(err);
-            res.sendStatus(500);
+    const data2 = '/workspaces/CRUD/node-CRUD-app/routes/data.json';
+    
+    try {
+        const data = JSON.parse(fs.readFileSync(data2, 'utf8'));
+        const idToDelete = parseInt(req.params.id);
+        
+        const indexToDelete = data.findIndex(user => user.id === idToDelete);
+
+        if (indexToDelete !== -1) {
+
+            data.splice(indexToDelete, 1);
+
+            const updatedJsonData = JSON.stringify(data, null, 2); 
+            
+            fs.writeFile(data2, updatedJsonData, (err) => {
+                if (err) {
+                  console.error(err);
+                   res.status(500).json({error:"Failed to update the data file"});
+                
+                } else {
+                   res.status(200).json({message:"Item deleted successfully", deletedItem: idToDelete});
+                }
+            });
+
         } else {
-        const rows = data.map(item => `
-            <tr>
-                <td>${item.id}</td>
-                <td>${item.name}</td>
-                <td>${item.location}</td>
-            </tr>
-            `).join('');
+            res.status(404).json({error: "Item not found"});
+        }
 
-            const html = `
-                <!DOCTYPE html>
-                <html lang="en">
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>JSON data presentation</title>
-                </head>
-                <body>
-
-                    <div class="container">
-                    
-                        <table>
-
-                            <thead>
-
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Location</th>
-                                </tr>
-                            </thead>
-                            <tbody>${rows}</tbody>
-                        </table>
-                    </div>
-                </body>
-                </html>
-            `;
-                res.sendStatus(200);
-            }
-        });
-    } else {
-        res.sendStatus(404);
+    } catch (error) {
+        console.error("Error reading data file:", error);
+        res.status(500).json({ error: "Failed to read data file" });
     }
 });
 
