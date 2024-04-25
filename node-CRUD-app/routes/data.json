@@ -1,5 +1,10 @@
 [
   {
+    "id": 1,
+    "name": "IBM",
+    "location": "San Francisco"
+  },
+  {
     "id": 2,
     "name": "Microsoft",
     "location": "Chicago"
@@ -7,11 +12,56 @@
   {
     "id": 3,
     "name": "Nvidia",
-    "location": "New york"
+    "location": "New York"
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "Amazon",
     "location": "Washington"
+  },
+  {
+    "id": 5,
+    "name": "Google",
+    "location": "Mountain View"
+  },
+  {
+    "id": 6,
+    "name": "Apple",
+    "location": "Cupertino"
+  },
+  {
+    "id": 7,
+    "name": "Facebook",
+    "location": "Menlo Park"
+  },
+  {
+    "id": 8,
+    "name": "Tesla",
+    "location": "Palo Alto"
+  },
+  {
+    "id": 9,
+    "name": "Netflix",
+    "location": "Los Gatos"
+  },
+  {
+    "id": 10,
+    "name": "Twitter",
+    "location": "San Francisco"
+  },
+  {
+    "id": 11,
+    "name": "Uber",
+    "location": "San Francisco"
+  },
+  {
+    "id": 12,
+    "name": "LinkedIn",
+    "location": "Sunnyvale"
+  },
+  {
+    "id": 13,
+    "name": "Salesforce",
+    "location": "San Francisco"
   }
 ]

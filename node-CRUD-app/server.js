@@ -1,3 +1,4 @@
+//importing the packages that we need
 const http = require("http");
 const express = require("express");
 var cors = require("cors");
@@ -7,23 +8,29 @@ const  searchrouter = require("./routes/search");
 const  addrouter = require("./routes/add");
 
 const app = express();
-app.use(express.json());
 
+//Usign cors and express Json features
+app.use(express.json());
 app.use(cors());
 
+//setting up routes for our pages
 app.use("/items", itemsrouter);
 app.use("/delete", deleterouter);
 app.use("/search", searchrouter);
 app.use("/add", addrouter);
 
 
-// default URL to API
+//default URL to API
 app.use("/", function (req, res) {
-  res.send("node-ex-api works :-)");
+  res.redirect("/items");
 });
 
+//creating server
 const server = http.createServer(app);
-const port = process.env.PORT || 3000; // Use the PORT environment variable if available, otherwise default to 3000
+
+//if 3000 port is not available we use other ports
+const port = process.env.PORT || 3000; 
+//configuring server to listen on this port
 server.listen(port, () => {
   console.debug("Server listening on port " + port);
 });

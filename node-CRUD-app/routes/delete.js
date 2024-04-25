@@ -3,10 +3,9 @@ const fs = require("fs");
 
 const router = express.Router();
 router.get("/:id", function(req, res) {
-    const data2 = '/workspaces/CRUD/node-CRUD-app/routes/data.json';
-    
+    const unParseddata = '/workspaces/CRUD/node-CRUD-app/routes/data.json';
     try {
-        const data = JSON.parse(fs.readFileSync(data2, 'utf8'));
+        const data = JSON.parse(fs.readFileSync(unParseddata, 'utf8'));
         const idToDelete = parseInt(req.params.id);
         
         const indexToDelete = data.findIndex(user => user.id === idToDelete);
@@ -17,18 +16,18 @@ router.get("/:id", function(req, res) {
 
             const updatedJsonData = JSON.stringify(data, null, 2); 
             
-            fs.writeFile(data2, updatedJsonData, (err) => {
+            fs.writeFile(unParseddata, updatedJsonData, (err) => {
                 if (err) {
                   console.error(err);
                    res.status(500).json({error:"Failed to update the data file"});
-                
+
                 } else {
                    res.status(200).json({message:"Item deleted successfully", deletedItem: idToDelete});
                 }
             });
 
         } else {
-            res.status(404).json({error: "Item not found"});
+            res.status(404).json({error:"Item not found"});
         }
 
     } catch (error) {
