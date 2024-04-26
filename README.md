@@ -32,7 +32,6 @@ To use the add operation do the following:
 <br>
 
 6) Later, follow the prompts in the terminal to provide the necessary input for the new entry.
-<img src="https://github.com/Anirudh-Madarapu/CRUD/assets/123264579/76a8a906-98aa-4a5e-ab32-a86fb3d17df2" align="left">
 
 <br>
 
@@ -54,8 +53,6 @@ To use the update operation do the following:
 <br>
 
 6) Later, follow the prompts in the terminal to provide the necessary input to update thea entry.
-
-
 
 
 ### Delete:
