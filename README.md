@@ -15,8 +15,8 @@ To use the add do the following:
 5) To add a new entry, replace /items with /add in the URL.
 
 <img src="https://github.com/Anirudh-Madarapu/CRUD/assets/123264579/6ff871a4-d050-41c0-975c-e322c9d7bb2e" align="left">
+<br>
 
 6) Later, follow the prompts in the terminal to provide the necessary input for the new entry.
-
-
 <img src="https://github.com/Anirudh-Madarapu/CRUD/assets/123264579/76a8a906-98aa-4a5e-ab32-a86fb3d17df2" align="left">
+<br>
