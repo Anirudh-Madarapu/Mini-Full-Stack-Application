@@ -13,6 +13,6 @@ To use the add do the following:
 3) Enter npm start
 4) The screen will display the landing page which consists of all the entries available in our data.
 5) To add a new entry, go to the search bar and replace /items with /add in the URL.
-
+![image](https://github.com/Anirudh-Madarapu/CRUD/assets/123264579/6ff871a4-d050-41c0-975c-e322c9d7bb2e)
 6) Later, the terminal will prompt for inputs
 
