@@ -2,10 +2,13 @@
 const http = require("http");
 const express = require("express");
 var cors = require("cors");
+
+//importing routes required for CRUD operations
 const  itemsrouter = require("./routes/items");
 const  deleterouter = require("./routes/delete");
 const  searchrouter = require("./routes/search");
 const  addrouter = require("./routes/add");
+const  updaterouter = require("./routes/update");
 
 const app = express();
 
@@ -18,6 +21,7 @@ app.use("/items", itemsrouter);
 app.use("/delete", deleterouter);
 app.use("/search", searchrouter);
 app.use("/add", addrouter);
+app.use("/update",updaterouter);
 
 
 //default URL to API
