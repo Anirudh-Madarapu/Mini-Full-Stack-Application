@@ -27,7 +27,7 @@ To use the add operation do the following:
 4) The application's landing page will be displayed, showing all entries available in the data.
 5) To add a new entry, replace /items with /add in the URL.
 
-<img src="https://github.com/Anirudh-Madarapu/CRUD/assets/123264579/6ff871a4-d050-41c0-975c-e322c9d7bb2e" align="left">
+<img src="https://github.com/Anirudh-Madarapu/CRUD/assets/123264579/6ff871a4-d050-41c0-975c-e322c9d7bb2e">
 
 <br>
 
@@ -51,7 +51,6 @@ To use the update operation do the following:
 ![alt text](image.png)
 
 <br>
-
 6) Later, follow the prompts in the terminal to provide the necessary input to update thea entry.
 
 
