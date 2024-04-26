@@ -6,7 +6,8 @@ const router = express.Router();
 //Creating a readline interface
 const rl = readline.createInterface({
   input: process.stdin,
-  output: process.stdout
+  output: process.stdout,
+  terminal: false
 });
 
 router.get("/", function(req, res) {
@@ -29,7 +30,6 @@ router.get("/", function(req, res) {
         //Printing successfull entry addition
         console.log('Entry added successfully!');
         res.sendStatus(200);
-        rl.close();
       });
     });
   });

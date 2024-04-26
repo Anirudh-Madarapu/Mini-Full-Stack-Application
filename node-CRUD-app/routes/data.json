@@ -1,13 +1,8 @@
 [
   {
-    "id": 1,
-    "name": "IBM",
-    "location": "San Francisco"
-  },
-  {
     "id": 2,
     "name": "Microsoft",
-    "location": "Chicago"
+    "location": "Washington"
   },
   {
     "id": 3,
@@ -63,5 +58,15 @@
     "id": 13,
     "name": "Salesforce",
     "location": "San Francisco"
+  },
+  {
+    "id": 14,
+    "name": "Dell",
+    "location": "Georgia"
+  },
+  {
+    "id": 15,
+    "name": "Intel",
+    "location": "Arizona"
   }
 ]

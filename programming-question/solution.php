@@ -10,19 +10,21 @@
 function findDigits($n) {
     $x = 0;
     $y = $n;
+    //iterating until we run out of all digits in a given 
     while($y!=0){
-        
+        //checking if the given digit is zero and is a factor of n
         if($y%10 !=0 && $n % ($y%10)==0){
-            $x = $x + 1;
+            $x = $x + 1;//if the given digit divides the number passed in the input
         }
-        
+        //moving to the next digiti in the given number
         $y = intdiv($y,10);
     }
+    //returning the number of digits that divide the given number
     return $x;
-    // Write your code here
 
 }
 
+//this is the starter code given by hackerank
 $fptr = fopen(getenv("OUTPUT_PATH"), "w");
 
 $t = intval(trim(fgets(STDIN)));
